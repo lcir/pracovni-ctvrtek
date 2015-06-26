@@ -2,19 +2,22 @@
   (:require [cljs.reader :as reader]
             [goog.events :as events]
             [om.core :as om :include-macros true]
-            [om.dom :as dom :include-macros true])
+            [om.dom :as dom :include-macros true]
+            [components.button :as but])
   (:import [goog.net XhrIo]
            goog.net.EventType
            [goog.events EventType]))
 
 (enable-console-print!)
 
-(println "Hello world!!!")
+(def app-state (atom {:foo "bar"}))
 
-(defn someName []
-  (js/alert "Něco")
-  )
+(defn widget [data owner]
+  (reify
+    om/IRender
+    (render [_]
+      (om/build but/counter-view {})
+      )))
 
-(defn ss []
-  (Math.log (10)))
-
+(om/root widget app-state
+         {:target (.getElementById js/document "app")})
