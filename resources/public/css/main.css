@@ -1,0 +1,11 @@
+@font-face {
+    font-family: lobster;
+    src: url(../font/Lobster.otf);
+}
+
+h1 {
+  font-size: 80px;
+  font-family: lobster;
+  margin: 40px;
+  color: #666666;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "pracovni-ctvrtek",
+  "version": "1.0.0",
+  "description": "Web site of project Working Thursday",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcir/pracovni-ctvrtek.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lcir/pracovni-ctvrtek/issues"
+  },
+  "homepage": "https://github.com/lcir/pracovni-ctvrtek#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "font-awesome": "^4.3.0"
+  }
+}
