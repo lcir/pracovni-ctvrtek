@@ -1,9 +1,9 @@
-(ns ^:figwheel-always hello-world.hello
+(ns ^:figwheel-always working-thursday.core
   (:require [cljs.reader :as reader]
             [goog.events :as events]
             [om.core :as om :include-macros true]
             [om.dom :as dom :include-macros true]
-            [components.button :as but])
+            [working-thursday.components :as comp])
   (:import [goog.net XhrIo]
            goog.net.EventType
            [goog.events EventType]))
@@ -16,8 +16,9 @@
   (reify
     om/IRender
     (render [_]
-      (om/build but/counter-view {})
-      )))
+      (dom/div nil
+      (om/build comp/header-view "Work{ing Thurs}day")
+      (om/build comp/paragraph-view {})))))
 
 (om/root widget app-state
          {:target (.getElementById js/document "app")})

@@ -23,14 +23,14 @@
             :clean-targets ^{:protect false} ["resources/public/js/out"
                                               "resources/public/js/main.js"]
 
-            :figwheel {:ring-handler hello-world.hello/handler}
+            :figwheel {:ring-handler working-thursday.core/handler}
 
             :cljsbuild {:builds [{:id "dev"
                                   :source-paths ["src/cljs"]
                                   :figwheel true
                                   :compiler {:output-to "resources/public/js/main.js"
                                              :output-dir "resources/public/js/out"
-                                             :main hello-world.hello
+                                             :main working-thursday.core
                                              :asset-path "js/out"
                                              :optimizations :none
                                              :source-map true}}]})
